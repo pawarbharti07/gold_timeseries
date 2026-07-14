@@ -21,7 +21,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 
 # Load Dataset
 
-df = pd.read_csv("/content/goldprices.csv")
+df = pd.read_csv("goldprices.csv")
 df.head()
 
 df.info()
@@ -48,7 +48,7 @@ data = df[["Close"]]
 scaler = MinMaxScaler(feature_range=(0, 1))
 scaled_data = scaler.fit_transform(data)
 
-joblib.dump(scaler, "scaler.pkl")
+joblib.dump(scaler, "gold_scaler.pkl")
 
 # Create Sequences
 
