@@ -7,11 +7,11 @@ from tensorflow.keras.models import load_model
 st.title("🥇 Gold Price Prediction")
 
 # Load model and scaler
-model = load_model(r"C:/Users/admin/Downloads/gold_price_lstm.keras")
-scaler = joblib.load(r"C:/Users/admin/Downloads/scaler (1).pkl")
+model = load_model("gold_price_lstm.keras")
+scaler = joblib.load("gold_scaler.pkl")
 
 # Load dataset
-df = pd.read_csv(r"C:/Users/admin/Downloads/goldprices.csv")
+df = pd.read_csv("goldprices.csv")
 
 st.write(df.tail())
 
